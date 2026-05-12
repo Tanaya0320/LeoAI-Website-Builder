@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+:root {
+
+  --background: #050505;
+  --foreground: #ffffff;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+
+  background:
+
+    radial-gradient(
+      circle at top left,
+      rgba(168,85,247,0.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(59,130,246,0.18),
+      transparent 30%
+    ),
+
+    #050505;
+
+  color: var(--foreground);
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  -moz-osx-font-smoothing:
+    grayscale;
+}
+
+* {
+
+  box-sizing: border-box;
+}
+
+::selection {
+
+  background: #8b5cf6;
+  color: white;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    linear-gradient(
+      to bottom,
+      #8b5cf6,
+      #3b82f6
+    );
+
+  border-radius: 999px;
+}
+
+/* INPUTS */
+
+input,
+textarea,
+select {
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+  outline: none;
+
+  transition:
+    all 0.25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+  border-color:
+    rgba(168,85,247,0.8);
+
+  box-shadow:
+    0 0 0 4px rgba(168,85,247,0.15);
+}
+
+/* BUTTONS */
+
+button {
+
+  transition:
+    all 0.25s ease;
+}
+
+button:hover {
+
+  transform:
+    translateY(-1px);
+}
+
+/* GLASS EFFECT */
+
+.glass {
+
+  background:
+    rgba(255,255,255,0.05);
+
+  backdrop-filter:
+    blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+/* PREMIUM CARD */
+
+.premium-card {
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.03)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:
+    blur(24px);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.35);
+
+  border-radius:
+    32px;
+}
+
+/* GLOW EFFECT */
+
+.glow-purple {
+
+  box-shadow:
+    0 0 80px rgba(168,85,247,0.25);
+}
+
+.glow-blue {
+
+  box-shadow:
+    0 0 80px rgba(59,130,246,0.25);
+}
+
+/* ANIMATIONS */
+
+.fade-in {
+
+  animation:
+    fadeIn 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+    transform:
+      translateY(12px);
+  }
+
+  to {
+
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+}
